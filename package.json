@@ -19,6 +19,8 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
-    "morgan": "^1.9.0"
+    "express-promise-router": "^3.0.1",
+    "morgan": "^1.9.0",
+    "promise-router": "^0.2.2"
   }
 }

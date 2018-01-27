@@ -1,3 +1,5 @@
+//https://www.youtube.com/watch?v=x_HRoXKo2es
+
 //handle dependencies
 
 const express= require('express');
@@ -7,8 +9,13 @@ const bodyParser= require('body-parser');
 const app = express();
 
 //Middlewares
+app.use(morgan('dev'));
+app.use(bodyParser.json());
 
-//routes
+//Routes
+app.use('/users', require('./routes/users'));
 
 //start the server
 const port = process.env.PORT || 3000;
+app.listen(port);
+console.log('Server listening at', port);
