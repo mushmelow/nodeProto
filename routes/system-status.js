@@ -5,5 +5,8 @@ const SystemStatusController = require('../controllers/system-status');
 
 router.route('/')
 	.get(SystemStatusController.getApplianceInfos)
+router.route('/')
+	.post(SystemStatusController.postApplianceInfos)
+	
 
 module.exports = router;
