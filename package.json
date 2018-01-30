@@ -21,8 +21,11 @@
     "express": "^4.16.2",
     "express-promise-router": "^3.0.1",
     "joi": "^13.1.1",
+    "jsonwebtoken": "^8.1.1",
     "mongoose": "^5.0.2",
     "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-jwt": "^3.0.1",
     "promise-router": "^0.2.2"
   }
 }
