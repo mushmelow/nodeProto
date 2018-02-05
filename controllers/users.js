@@ -25,7 +25,7 @@ module.exports= {
 		if (foundUser) {
 
 			console.log("fail")
-			return res.status(403).send({ error: 'email is already in use'})
+			return res.status(403).json({ errors: {global:'email is already in use'}})
 		}
 		/*  
 		const email=req.value.body.email;
