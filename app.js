@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 
 //Routes
 app.use('/users', require('./routes/users'));
-app.use('/system-status', require('./routes/system-status'));
+app.use('/appliance_infos', require('./routes/system-status'));
 
 //mongoose config
 var dbUrl = 'mongodb://admin:12345678@ds117848.mlab.com:17848/nodeproto'
@@ -28,7 +28,7 @@ mongoose.connect(dbUrl, (err) => {
 })
 
 //start the server
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3000;
 app.listen(port);
 console.log('Server listening at', port);
 
