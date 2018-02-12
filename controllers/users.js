@@ -44,7 +44,7 @@ module.exports= {
 
 		//respond with token
 		//res.json({user: 'created'})
-		res.status(200).json({token});
+		res.status(200).json({user: {token: token, email: req.body.email}});
 	},
 
 	signIn: async(req, res, next) => {
