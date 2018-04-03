@@ -24,8 +24,7 @@ module.exports= {
 	    }) 
 	},
 	getExecDateAndUptime: async(req, res, next) => {	 
-		exec('uptime', (err, stdout, stderr) => {
-			let uptime = "";
+		exec('./scripts/system-status.sh', (err, stdout, stderr) => {
 		  if (err) {
 		  	res.send({stderr:stderr});
 		    // node couldn't execute the command
@@ -34,8 +33,9 @@ module.exports= {
 		  // the *entire* stdout and stderr (buffered)
 		  console.log(`stdout: ${stdout}`);
 		  console.log(`stderr: ${stderr}`);
-		  uptime = stdout;
-		  res.send({uptime: uptime}); 
+		  let result = JSON.parse(stdout);
+		  res.send({result: result}); 
+
 		}); 
 		// exec('date', (err, stdout, stderr) => {
 		// 	 let date = "";
