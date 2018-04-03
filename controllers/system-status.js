@@ -23,7 +23,7 @@ module.exports= {
 	        return console.error('errors :', err)
 	    }) 
 	},
-	getExecDateAndUptime: async(req, res, next) => {	
+	getExecDateAndUptime: async(req, res, next) => {	 
 		exec('uptime', (err, stdout, stderr) => {
 			let uptime = "";
 		  if (err) {
@@ -35,8 +35,8 @@ module.exports= {
 		  console.log(`stdout: ${stdout}`);
 		  console.log(`stderr: ${stderr}`);
 		  uptime = stdout;
-		  res.send({uptime: uptime});
-		});
+		  res.send({uptime: uptime}); 
+		}); 
 		// exec('date', (err, stdout, stderr) => {
 		// 	 let date = "";
 		//   if (err) {
