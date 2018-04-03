@@ -7,6 +7,7 @@ router.route('/')
 	.get(SystemStatusController.getApplianceInfos)
 router.route('/')
 	.post(SystemStatusController.postApplianceInfos)
-	
+router.route('/exec-date-and-uptime')
+	.get(SystemStatusController.getExecDateAndUptime)
 
 module.exports = router;
