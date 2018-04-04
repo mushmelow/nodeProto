@@ -30,5 +30,5 @@ mongoose.connect(dbUrl, (err) => {
 //start the server
 //const port = process.env.PORT || 3000;
 app.listen(3000, '127.0.0.1');
-console.log('Server listening at 192.168.20.139:8080');
+console.log('Server listening at 127.0.0.1:3000');
 
